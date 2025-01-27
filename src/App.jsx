@@ -5,7 +5,7 @@ import GameBoard from "./components/GameBoard";
 import Log from "./components/Log";
 
 function App() {
-  const [gameTurs, setGameTurns] = useState([]);
+  const [gameTurns, setGameTurns] = useState([]);
   const [activePlayer, setActivePlayer] = useState('X');
 
   function handleSelectSquare(rowIndex, colIndex) {
@@ -33,9 +33,9 @@ function App() {
           <Player initialName="PLAYER 1" symbol="X" isActive={activePlayer === "X"} />
           <Player initialName="PLAYER 2" symbol="O" isActive={activePlayer === "O"} />
         </ol>
-        <GameBoard onSelectSquare={handleSelectSquare} activePlayerSymbol={activePlayer} />
+        <GameBoard onSelectSquare={handleSelectSquare} turns={gameTurns} />
       </div>
-      <Log />
+      <Log turns={gameTurns}/>
     </main>
   )
 }
