@@ -138,6 +138,10 @@ h1 {
   color: #e1dec7;
 }
 
+.name-upper {
+  text-transform: capitalize;
+}
+
 ol {
   list-style: none;
   margin: 0;
